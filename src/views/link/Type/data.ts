@@ -45,7 +45,7 @@ export const TCPList = [
     'HTTP_SERVER',
     'MQTT_SERVER',
 ];
-export const UDPList = ['UDP', 'COAP_SERVER'];
+export const UDPList = ['UDP', 'COAP_SERVER', 'LWM2M_SERVER'];
 
 const VisibleMost = [
     'COAP_SERVER',
@@ -54,6 +54,7 @@ const VisibleMost = [
     'TCP_SERVER',
     'UDP',
     'HTTP_SERVER',
+    'LWM2M_SERVER',
 ];
 
 export const VisibleData = {
@@ -65,11 +66,11 @@ export const VisibleData = {
     serverId: ['MQTT_CLIENT'],
     remoteHost: ['MQTT_CLIENT'],
     remotePort: ['MQTT_CLIENT'],
-    secure: ['UDP', 'COAP_SERVER'],
+    secure: ['UDP', 'COAP_SERVER', 'LWM2M_SERVER'],
     username: ['MQTT_CLIENT'],
     password: ['MQTT_CLIENT'],
     topicPrefix: ['MQTT_CLIENT'],
-    maxMessageSize: ['MQTT_SERVER', 'MQTT_CLIENT'],
+    maxMessageSize: ['MQTT_SERVER', 'MQTT_CLIENT', 'LWM2M_SERVER'],
     clientId: ['MQTT_CLIENT'],
     delimited: ['DELIMITED'],
     lang: ['SCRIPT'],
