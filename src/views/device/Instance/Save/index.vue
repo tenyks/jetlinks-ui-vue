@@ -99,13 +99,15 @@
                         v-model:value="modelRef.productId"
                         :disabled="!!data?.id"
                         placeholder="请选择状态为“正常”的产品"
+                        @change="onProductSelected"
                     >
                         <j-select-option
                             :value="item.id"
                             v-for="item in productList"
                             :key="item.id"
                             :label="item.name"
-                            >{{ item.name }}</j-select-option
+                            >{{ item.name }}
+                        </j-select-option
                         >
                     </j-select>
                 </j-form-item>
@@ -151,6 +153,7 @@ const formRef = ref();
 
 const modelRef = reactive({
     productId: undefined,
+    productName: undefined,
     id: undefined,
     name: '',
     describe: '',
@@ -204,12 +207,21 @@ const handleCancel = () => {
     formRef.value.resetFields();
 };
 
+const onProductSelected = (value, item2) => {
+  console.info("ProductSelected = ", value, item2)
+  if (item2 != null) {
+      modelRef.productName = item2.label;
+  }
+};
+
 const handleSave = () => {
+    console.info("formRef = ", modelRef)
     formRef.value
         .validate()
         .then(async (_data: any) => {
             loading.value = true;
             const obj = { ..._data };
+            obj.productName = modelRef.productName;
             if (!obj.id) {
                 delete obj.id;
             }
