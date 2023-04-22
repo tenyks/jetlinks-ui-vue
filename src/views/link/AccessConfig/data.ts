@@ -15,6 +15,7 @@ ProtocolMapping.set('modbus-tcp', 'MODBUS_TCP');
 ProtocolMapping.set('opc-ua', 'OPC_UA');
 ProtocolMapping.set('edge-child-device', 'EdgeGateway');
 ProtocolMapping.set('official-edge-gateway', 'MQTT');
+ProtocolMapping.set('lwm2m-server-gateway', 'LwM2M');
 
 const NetworkTypeMapping = new Map();
 NetworkTypeMapping.set('websocket-server', 'WEB_SOCKET_SERVER');
@@ -25,6 +26,7 @@ NetworkTypeMapping.set('mqtt-client-gateway', 'MQTT_CLIENT');
 NetworkTypeMapping.set('mqtt-server-gateway', 'MQTT_SERVER');
 NetworkTypeMapping.set('tcp-server-gateway', 'TCP_SERVER');
 NetworkTypeMapping.set('official-edge-gateway', 'MQTT_SERVER');
+NetworkTypeMapping.set('lwm2m-server-gateway', 'LWM2M_SERVER');
 
 const BackMap = new Map();
 BackMap.set('mqtt-server-gateway', getImage('/access/mqtt.png'));
@@ -44,6 +46,7 @@ BackMap.set('gb28181-2016', getImage('/access/gb28181.png'));
 BackMap.set('mqtt-client-gateway', getImage('/access/mqtt-broke.png'));
 BackMap.set('edge-child-device', getImage('/access/child-device.png'));
 BackMap.set('official-edge-gateway', getImage('/access/edge.png'));
+BackMap.set('lwm2m-server-gateway', getImage('/access/lwm2m.png'));
 
 const descriptionList = {
     'udp-device-gateway':
