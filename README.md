@@ -18,11 +18,13 @@ yarn
 yarn dev
 
 # 更新jetlinks-ui-components
-yarn add jetlinks-ui-components@latest
+yarn add jetlinks-ui-components@1.0.10
 
 # 更新jetlinks-ui-components之后没有效果时
 yarn dev:force
 
+# 打包
+yarn build
 ```
 
 ### 备注
