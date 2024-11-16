@@ -91,7 +91,7 @@ const resetMetadata = async () => {
     top: 12px;
     z-index: 1;
     margin-left: 420px;
-    font-weight: 100;
+    font-weight: 150;
   }
 
   .metadataNav {

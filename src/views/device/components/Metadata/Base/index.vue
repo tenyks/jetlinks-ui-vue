@@ -20,13 +20,13 @@
     :pagination="pagination">
     <template #bodyCell="{ column, record }">
       <template v-if="column.dataIndex === 'id'">
-        <div style="width: 100px"><Ellipsis>{{ record.id || '-' }}</Ellipsis></div>
+        <div style="width: 250px"><Ellipsis>{{ record.id || '-' }}</Ellipsis></div>
       </template>
       <template v-if="column.dataIndex === 'name'">
-        <div style="width: 200px"><Ellipsis>{{ record.name || '-' }}</Ellipsis></div>
+        <div style="width: 300px"><Ellipsis>{{ record.name || '-' }}</Ellipsis></div>
       </template>
       <template v-if="column.dataIndex === 'description'">
-        <div style="width: 200px"><Ellipsis>{{ record.description || '-' }}</Ellipsis></div>
+        <div style="width: 300px"><Ellipsis>{{ record.description || '-' }}</Ellipsis></div>
       </template>
       <template v-if="column.dataIndex === 'level'">
         {{ levelMap[record.expands?.level] || '-' }}
@@ -201,7 +201,7 @@ const resetMetadata = async () => {
     await productStore.getDetail(id as string)
   }
   metadataStore.set('importMetadata', true)
-  
+
 };
 
 const removeItem = async (record: MetadataItem) => {

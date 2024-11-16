@@ -16,17 +16,18 @@ const BaseColumns: ColumnProps[] = [
   {
     title: '标识',
     dataIndex: 'id',
-    width: 100
+    width: 200,
+    ellipsis: false
   },
   {
     title: '名称',
     dataIndex: 'name',
-    width: 200
+    width: 300
   },
   {
     title: '说明',
     dataIndex: 'description',
-    width: 200
+    width: 400
   },
 ];
 
